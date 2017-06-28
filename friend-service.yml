@@ -1,0 +1,77 @@
+server:
+  port: 1235
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.10:1111/eureka/
+
+rongyun:
+  url:
+jwt:
+  auth:
+    header:
+      prefix: Bearer
+
+token:
+  secret:
+    key: shanchat
+shanxun:
+  token:
+    template: shanxun|
+    timeout: 7
+  phone:
+    code:
+      template: phoneCode|
+sms:
+  expire:
+    time: 5
+    interval: 60 * 1
+default:
+  user:
+    avatar: http://dev.turing.online:8888/img/default_img.png
+shan:
+  xin:
+    hui:
+      b: test#123
+      k: app_poly
+      s:
+      v: 1
+      secret: poly123
+      url: http://sxz-api.shanxinhui.com.cn/app
+spring:
+  datasource:
+    name: shanxun
+    url: jdbc:mysql://192.168.1.10:3306/shanxun_friend
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 60000
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    host: 192.168.1.10
+    port: 6379
+    password:
+    timeout: 10000
+    pool:
+      maxActive: 8
+      maxWait: -1
+      maxIdle: 8
+      minIdle: 0
+
+logger:
+  shanxun:
+    path: G:\\git\\shanxun\\logs\\friend-service.log
+    errorPath: G:\\git\\shanxun\\logs\\friend-service-error.log

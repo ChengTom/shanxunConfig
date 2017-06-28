@@ -1,0 +1,20 @@
+group:
+  circle:
+    limit: 3
+server:
+  port: 1238
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://friend:friend@192.168.1.10:10250/friend
+shan:
+  xin:
+    hui:
+      b: test#123
+      k: app_poly
+      s:
+      v: 1
+      secret: poly123
+      url: http://sxz-api.shanxinhui.com.cn/app

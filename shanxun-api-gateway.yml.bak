@@ -1,0 +1,35 @@
+server:
+  port: 6666
+shanxun:
+  token:
+    template: shanxun|
+zuul:
+  routes:
+    user:
+      path: /user/**
+      stripPrefix: false
+      serviceId: user-service
+    friendship:
+      path: /friendship/**
+      stripPrefix: false
+      serviceId: friend-service
+    group:
+      path: /group/**
+      stripPrefix: false
+      serviceId: group-service
+    friendCircle:
+      path: /friend/**
+      stripPrefix: false
+      serviceId: friend-circle-service
+
+spring:
+  redis:
+    host: 192.168.1.10
+    port: 6379
+    password:
+    timeout: 10000
+    pool:
+      maxActive: 8
+      maxWait: -1
+      maxIdle: 8
+      minIdle: 0
