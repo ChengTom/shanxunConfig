@@ -73,5 +73,5 @@ spring:
 
 logger:
   shanxun:
-    path: G:\\git\\shanxun\\logs\\friend-service.log
-    errorPath: G:\\git\\shanxun\\logs\\friend-service-error.log
+    path: logs/friend-service.log
+    errorPath: logs/friend-service-error.log

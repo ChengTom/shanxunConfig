@@ -75,5 +75,5 @@ spring:
 
 logger:
   shanxun:
-    path: G:\\git\\shanxun\\logs\\group-service.log
-    errorPath: G:\\git\\shanxun\\logs\\group-service-error.log
+    path: logs/group-service.log
+    errorPath: logs/group-service-error.log
